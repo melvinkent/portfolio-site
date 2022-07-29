@@ -64,7 +64,7 @@ const UserFind: React.FC = () => {
                 <button disabled={!text} onClick={handleOnClick} className="bg-transparent hover:bg-yellow-500 text-yellow-500 font-semibold hover:text-white py-2 px-4 border border-yellow-600  rounded ">Search</button>
             </div>
 
-            <div className="body">
+            <div className="body mb-5" >
                     {userList && userList?.length ===0 && (
                     <div className='notFound'>
                         No User Found

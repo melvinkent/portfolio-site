@@ -4,6 +4,7 @@ import ProjectPreview, { ProjectPreviewInterface, } from '../components/project_
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import UserFind from '../components/UserFind';
+import Images from '../components/images';
 
 const Home: NextPage = () => {
   const searchIcon = <FontAwesomeIcon icon={faGoogle} />
