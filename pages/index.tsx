@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import UserFind from '../components/UserFind';
 import Images from '../components/images';
+import React, {useEffect, useState} from 'react';
 
 const Home: NextPage = () => {
   const searchIcon = <FontAwesomeIcon icon={faGoogle} />
@@ -40,7 +41,15 @@ const Home: NextPage = () => {
     const element = <ProjectPreview {...metaData} key={i} />;
     projectPreviewElements.push(element)
   } 
-  
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/albums/1/photos").then(
+      response => response.json().then(data => {
+        setImages(data);
+      })
+    )
+  })
   return (
     <div>
       <Profile/>
@@ -55,9 +64,9 @@ const Home: NextPage = () => {
           </a>
         </form>
         {projectPreviewElements}
-        
       </div>
       <UserFind/>
+      <Images data = {images} />
     </div>
   );
 };

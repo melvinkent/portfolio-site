@@ -21,7 +21,7 @@ export default function Images(props) {
 
   return (
     <>
-        <div className = "images grid grid-cols-2 gap-2">
+        <div className = "images grid grid-cols-2 gap-2 mb-4">
             {currentItems.map(image => {
                 return (
                     <div className="image ">
@@ -41,7 +41,7 @@ export default function Images(props) {
             containerClassName ="pagination list-none flex justify-center gap-1 mb-3"
             pageLinkClassName="page-num py-2 px-3.5 cursor-pointer rounded font-normal hover:bg-indigo-500 hover:text-white"
             previousLinkClassName="page-num py-2 px-3.5 cursor-pointer rounded font-normal hover:bg-indigo-500 hover:text-white"
-            nextLinkClassName="page-num py-2 px-3.5 cursor-pointer rounded font-normal hover:bg-indigo-500 hover:text-white"
+            nextLinkClassName="page-num py-2 px-3.5 cursor-pointer rounded font-normal hover:bg-indigo-500 hover:text-white	"
             activeLinkClassName="active bg-indigo-500 "
         />
     </>
